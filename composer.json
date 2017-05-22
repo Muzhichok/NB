@@ -6,5 +6,13 @@
             "email": "o.muzhychok@hexa.com.ua"
         }
     ],
-    "require": {}
+    "require": {
+        "php": ">=5.6.0"
+    },
+    "require-dev": {
+        "codeception/codeception": "~2.2.11"
+    },
+    "scripts": {
+        "test": "./vendor/bin/codecept run --no-interaction"
+    }
 }

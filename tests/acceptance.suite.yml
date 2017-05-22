@@ -12,7 +12,7 @@ modules:
     config:
             WebDriver:
                 url: 'https://enterprise-demo.orangehrmlive.com/auth/login'
-                browser: chrome
+                browser: firefox
                 window_size: 1280x900
 
     chrome:
