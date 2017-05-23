@@ -16,5 +16,3 @@ $I->fillField(".//*[@id='txtPassword']", $admin['password']);
 $I->click(".//*[@id='btnLogin']");
 
 $I->canSee('Welcome Admin');
-
-
