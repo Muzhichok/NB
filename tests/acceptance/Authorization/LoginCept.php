@@ -1,18 +1,20 @@
 <?php
 
+use Step\Acceptance\CommonSteps;
+
 $I = new AcceptanceTester($scenario);
 
 $I->wantTo('login as admin');
 
-$admin = [
+$user = [
     'username' => 'Admin',
     'password' => 'admin'
 ];
 
+$Authorization = new CommonSteps($scenario);
+
 $I->amOnPage('/');
 
-$I->fillField(".//*[@id='txtUsername']", $admin['username']);
-$I->fillField(".//*[@id='txtPassword']", $admin['password']);
-$I->click(".//*[@id='btnLogin']");
+$Authorization->login($user['username'], $user['password']);
 
-$I->canSee('Welcome Admin');
+$I->canSee('Welcome ' . $user['username']);
